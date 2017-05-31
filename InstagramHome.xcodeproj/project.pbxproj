@@ -14,6 +14,10 @@
 		B78320C51EDE4EBC00A5B05A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78320C31EDE4EBC00A5B05A /* LaunchScreen.storyboard */; };
 		B78320D01EDE4EBC00A5B05A /* InstagramHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320CF1EDE4EBC00A5B05A /* InstagramHomeTests.swift */; };
 		B78320DB1EDE4EBC00A5B05A /* InstagramHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320DA1EDE4EBC00A5B05A /* InstagramHomeUITests.swift */; };
+		B78320EC1EDE529400A5B05A /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320EB1EDE529400A5B05A /* LeftViewController.swift */; };
+		B78320EE1EDE535400A5B05A /* LeftVcPresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320ED1EDE535400A5B05A /* LeftVcPresentTransition.swift */; };
+		B78320F01EDE608900A5B05A /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320EF1EDE608900A5B05A /* RightViewController.swift */; };
+		B78320F21EDE60A200A5B05A /* RightVcPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320F11EDE60A200A5B05A /* RightVcPushTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		B78320D61EDE4EBC00A5B05A /* InstagramHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78320DA1EDE4EBC00A5B05A /* InstagramHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramHomeUITests.swift; sourceTree = "<group>"; };
 		B78320DC1EDE4EBC00A5B05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78320EB1EDE529400A5B05A /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		B78320ED1EDE535400A5B05A /* LeftVcPresentTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftVcPresentTransition.swift; sourceTree = "<group>"; };
+		B78320EF1EDE608900A5B05A /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		B78320F11EDE60A200A5B05A /* RightVcPushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightVcPushTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,8 @@
 		B78320B91EDE4EBC00A5B05A /* InstagramHome */ = {
 			isa = PBXGroup;
 			children = (
+				B78320E91EDE527500A5B05A /* LeftVc */,
+				B78320EA1EDE527500A5B05A /* RightVc */,
 				B78320BA1EDE4EBC00A5B05A /* AppDelegate.swift */,
 				B78320BC1EDE4EBC00A5B05A /* ViewController.swift */,
 				B78320BE1EDE4EBC00A5B05A /* Main.storyboard */,
@@ -123,6 +133,24 @@
 				B78320DC1EDE4EBC00A5B05A /* Info.plist */,
 			);
 			path = InstagramHomeUITests;
+			sourceTree = "<group>";
+		};
+		B78320E91EDE527500A5B05A /* LeftVc */ = {
+			isa = PBXGroup;
+			children = (
+				B78320EB1EDE529400A5B05A /* LeftViewController.swift */,
+				B78320ED1EDE535400A5B05A /* LeftVcPresentTransition.swift */,
+			);
+			path = LeftVc;
+			sourceTree = "<group>";
+		};
+		B78320EA1EDE527500A5B05A /* RightVc */ = {
+			isa = PBXGroup;
+			children = (
+				B78320EF1EDE608900A5B05A /* RightViewController.swift */,
+				B78320F11EDE60A200A5B05A /* RightVcPushTransition.swift */,
+			);
+			path = RightVc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78320EC1EDE529400A5B05A /* LeftViewController.swift in Sources */,
 				B78320BD1EDE4EBC00A5B05A /* ViewController.swift in Sources */,
+				B78320F01EDE608900A5B05A /* RightViewController.swift in Sources */,
 				B78320BB1EDE4EBC00A5B05A /* AppDelegate.swift in Sources */,
+				B78320F21EDE60A200A5B05A /* RightVcPushTransition.swift in Sources */,
+				B78320EE1EDE535400A5B05A /* LeftVcPresentTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +547,7 @@
 				B78320E11EDE4EBC00A5B05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B78320E21EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHomeTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +556,7 @@
 				B78320E41EDE4EBC00A5B05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B78320E51EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHomeUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +565,7 @@
 				B78320E71EDE4EBC00A5B05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

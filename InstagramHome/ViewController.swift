@@ -15,11 +15,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func leftBtnOnClick() {
+        let leftVc = LeftViewController()
+        present(leftVc, animated: true, completion: nil)
+        
     }
-
-
+    
+    @IBAction func rightBtnOnClick() {
+        
+    }
+    
 }
 

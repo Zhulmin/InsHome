@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B78320B61EDE4EBC00A5B05A"
-               BuildableName = "InstagramHome.app"
-               BlueprintName = "InstagramHome"
-               ReferencedContainer = "container:InstagramHome.xcodeproj">
+               BuildableName = "InsHome.app"
+               BlueprintName = "InsHome"
+               ReferencedContainer = "container:InsHome.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B78320CA1EDE4EBC00A5B05A"
-               BuildableName = "InstagramHomeTests.xctest"
-               BlueprintName = "InstagramHomeTests"
-               ReferencedContainer = "container:InstagramHome.xcodeproj">
+               BuildableName = "InsHomeTests.xctest"
+               BlueprintName = "InsHomeTests"
+               ReferencedContainer = "container:InsHome.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B78320D51EDE4EBC00A5B05A"
-               BuildableName = "InstagramHomeUITests.xctest"
-               BlueprintName = "InstagramHomeUITests"
-               ReferencedContainer = "container:InstagramHome.xcodeproj">
+               BuildableName = "InsHomeUITests.xctest"
+               BlueprintName = "InsHomeUITests"
+               ReferencedContainer = "container:InsHome.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B78320B61EDE4EBC00A5B05A"
-            BuildableName = "InstagramHome.app"
-            BlueprintName = "InstagramHome"
-            ReferencedContainer = "container:InstagramHome.xcodeproj">
+            BuildableName = "InsHome.app"
+            BlueprintName = "InsHome"
+            ReferencedContainer = "container:InsHome.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B78320B61EDE4EBC00A5B05A"
-            BuildableName = "InstagramHome.app"
-            BlueprintName = "InstagramHome"
-            ReferencedContainer = "container:InstagramHome.xcodeproj">
+            BuildableName = "InsHome.app"
+            BlueprintName = "InsHome"
+            ReferencedContainer = "container:InsHome.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B78320B61EDE4EBC00A5B05A"
-            BuildableName = "InstagramHome.app"
-            BlueprintName = "InstagramHome"
-            ReferencedContainer = "container:InstagramHome.xcodeproj">
+            BuildableName = "InsHome.app"
+            BlueprintName = "InsHome"
+            ReferencedContainer = "container:InsHome.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

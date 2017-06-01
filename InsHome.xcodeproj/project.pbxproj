@@ -40,17 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B78320B71EDE4EBC00A5B05A /* InstagramHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78320B71EDE4EBC00A5B05A /* InsHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78320BA1EDE4EBC00A5B05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B78320BC1EDE4EBC00A5B05A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B78320BF1EDE4EBC00A5B05A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B78320C11EDE4EBC00A5B05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B78320C41EDE4EBC00A5B05A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B78320C61EDE4EBC00A5B05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B78320CB1EDE4EBC00A5B05A /* InstagramHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78320CB1EDE4EBC00A5B05A /* InsHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78320CF1EDE4EBC00A5B05A /* InstagramHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramHomeTests.swift; sourceTree = "<group>"; };
 		B78320D11EDE4EBC00A5B05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B78320D61EDE4EBC00A5B05A /* InstagramHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78320D61EDE4EBC00A5B05A /* InsHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78320DA1EDE4EBC00A5B05A /* InstagramHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramHomeUITests.swift; sourceTree = "<group>"; };
 		B78320DC1EDE4EBC00A5B05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B78320EB1EDE529400A5B05A /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 		B78320B81EDE4EBC00A5B05A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B78320B71EDE4EBC00A5B05A /* InstagramHome.app */,
-				B78320CB1EDE4EBC00A5B05A /* InstagramHomeTests.xctest */,
-				B78320D61EDE4EBC00A5B05A /* InstagramHomeUITests.xctest */,
+				B78320B71EDE4EBC00A5B05A /* InsHome.app */,
+				B78320CB1EDE4EBC00A5B05A /* InsHomeTests.xctest */,
+				B78320D61EDE4EBC00A5B05A /* InsHomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B78320B61EDE4EBC00A5B05A /* InstagramHome */ = {
+		B78320B61EDE4EBC00A5B05A /* InsHome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B78320DF1EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHome" */;
+			buildConfigurationList = B78320DF1EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InsHome" */;
 			buildPhases = (
 				B78320B31EDE4EBC00A5B05A /* Sources */,
 				B78320B41EDE4EBC00A5B05A /* Frameworks */,
@@ -174,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = InstagramHome;
+			name = InsHome;
 			productName = InstagramHome;
-			productReference = B78320B71EDE4EBC00A5B05A /* InstagramHome.app */;
+			productReference = B78320B71EDE4EBC00A5B05A /* InsHome.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B78320CA1EDE4EBC00A5B05A /* InstagramHomeTests */ = {
+		B78320CA1EDE4EBC00A5B05A /* InsHomeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B78320E21EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHomeTests" */;
+			buildConfigurationList = B78320E21EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InsHomeTests" */;
 			buildPhases = (
 				B78320C71EDE4EBC00A5B05A /* Sources */,
 				B78320C81EDE4EBC00A5B05A /* Frameworks */,
@@ -192,14 +192,14 @@
 			dependencies = (
 				B78320CD1EDE4EBC00A5B05A /* PBXTargetDependency */,
 			);
-			name = InstagramHomeTests;
+			name = InsHomeTests;
 			productName = InstagramHomeTests;
-			productReference = B78320CB1EDE4EBC00A5B05A /* InstagramHomeTests.xctest */;
+			productReference = B78320CB1EDE4EBC00A5B05A /* InsHomeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B78320D51EDE4EBC00A5B05A /* InstagramHomeUITests */ = {
+		B78320D51EDE4EBC00A5B05A /* InsHomeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B78320E51EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHomeUITests" */;
+			buildConfigurationList = B78320E51EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InsHomeUITests" */;
 			buildPhases = (
 				B78320D21EDE4EBC00A5B05A /* Sources */,
 				B78320D31EDE4EBC00A5B05A /* Frameworks */,
@@ -210,9 +210,9 @@
 			dependencies = (
 				B78320D81EDE4EBC00A5B05A /* PBXTargetDependency */,
 			);
-			name = InstagramHomeUITests;
+			name = InsHomeUITests;
 			productName = InstagramHomeUITests;
-			productReference = B78320D61EDE4EBC00A5B05A /* InstagramHomeUITests.xctest */;
+			productReference = B78320D61EDE4EBC00A5B05A /* InsHomeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +244,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B78320B21EDE4EBC00A5B05A /* Build configuration list for PBXProject "InstagramHome" */;
+			buildConfigurationList = B78320B21EDE4EBC00A5B05A /* Build configuration list for PBXProject "InsHome" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -257,9 +257,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B78320B61EDE4EBC00A5B05A /* InstagramHome */,
-				B78320CA1EDE4EBC00A5B05A /* InstagramHomeTests */,
-				B78320D51EDE4EBC00A5B05A /* InstagramHomeUITests */,
+				B78320B61EDE4EBC00A5B05A /* InsHome */,
+				B78320CA1EDE4EBC00A5B05A /* InsHomeTests */,
+				B78320D51EDE4EBC00A5B05A /* InsHomeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,12 +328,12 @@
 /* Begin PBXTargetDependency section */
 		B78320CD1EDE4EBC00A5B05A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B78320B61EDE4EBC00A5B05A /* InstagramHome */;
+			target = B78320B61EDE4EBC00A5B05A /* InsHome */;
 			targetProxy = B78320CC1EDE4EBC00A5B05A /* PBXContainerItemProxy */;
 		};
 		B78320D81EDE4EBC00A5B05A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B78320B61EDE4EBC00A5B05A /* InstagramHome */;
+			target = B78320B61EDE4EBC00A5B05A /* InsHome */;
 			targetProxy = B78320D71EDE4EBC00A5B05A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -490,7 +490,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rain.com.InstagramHomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramHome.app/InstagramHome";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InsHome.app/InsHome";
 			};
 			name = Debug;
 		};
@@ -505,7 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rain.com.InstagramHomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramHome.app/InstagramHome";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InsHome.app/InsHome";
 			};
 			name = Release;
 		};
@@ -540,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B78320B21EDE4EBC00A5B05A /* Build configuration list for PBXProject "InstagramHome" */ = {
+		B78320B21EDE4EBC00A5B05A /* Build configuration list for PBXProject "InsHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B78320DD1EDE4EBC00A5B05A /* Debug */,
@@ -549,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B78320DF1EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHome" */ = {
+		B78320DF1EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InsHome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B78320E01EDE4EBC00A5B05A /* Debug */,
@@ -558,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B78320E21EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHomeTests" */ = {
+		B78320E21EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InsHomeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B78320E31EDE4EBC00A5B05A /* Debug */,
@@ -567,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B78320E51EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InstagramHomeUITests" */ = {
+		B78320E51EDE4EBC00A5B05A /* Build configuration list for PBXNativeTarget "InsHomeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B78320E61EDE4EBC00A5B05A /* Debug */,

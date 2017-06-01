@@ -51,11 +51,6 @@ extension LeftVcPresentTransition : UIViewControllerAnimatedTransitioning {
             let toView = transitionContext.viewController(forKey: .to)?.view else {
                 return
         }
-//        guard let fromView = transitionContext.view(forKey: .from),
-//            let toView = transitionContext.view(forKey: .to)
-//            else {
-//                return
-//        }
         
         let containerView = transitionContext.containerView
         containerView.addSubview(toView)
@@ -73,9 +68,6 @@ extension LeftVcPresentTransition : UIViewControllerAnimatedTransitioning {
             fromView.frame = CGRect(x: toViewWidth, y: 0, width: toViewWidth, height: toViewHeight)
         }, completion: {_ in
             
-            print(toView)
-            print(containerView)
-//            UIApplication.shared.keyWindow?.sendSubview(toBack: toView)
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
@@ -102,12 +94,8 @@ extension LeftVcPresentTransition : UIViewControllerAnimatedTransitioning {
             fromView.frame = CGRect(x: -toViewWidth, y: 0, width: toViewWidth, height: toViewHeight)
         }, completion: {_ in
             
-            // Add the following line before completing the transition
-//            UIApplication.shared.keyWindow?.sendSubview(toBack: toView)
-            
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
-        
     }
     
 }

@@ -8,40 +8,32 @@
 
 import UIKit
 
+
+public protocol LeftViewControllerDelegate:NSObjectProtocol {
+    func dismiss()
+    func setDismissInteractive()
+}
+
 class LeftViewController: UIViewController {
 
+    public weak var delegate:LeftViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.init(white: 0.5, alpha: 0.5)
-    }
-
-}
-
-
-extension LeftViewController : UIViewControllerTransitioningDelegate {
-    
-    
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return LeftVcPresentTransition(transitionType: .LeftVcTransitionTypePresented)
+        view.backgroundColor = UIColor.init(white: 0.8, alpha: 1.0)
+        self.setupViews()
     }
     
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return LeftVcPresentTransition(transitionType: .LeftVcTransitionTypeDismiss)
+    private func setupViews() {
+        let btn = UIButton()
+        btn.backgroundColor = UIColor.purple
+        btn.frame = CGRect(x: 100, y: 200, width: 100, height: 100)
+        view.addSubview(btn)
+        btn.addTarget(self, action:#selector(dismissVc), for: .touchUpInside)
     }
     
-    
-    /** 动画 返回percent手势对象 */
-    
-//    public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//        
-//    }
-//    
-//    
-//    
-//    public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//        
-//    }
-    
-    
+    func dismissVc() {
+        delegate?.dismiss()
+    }
 }

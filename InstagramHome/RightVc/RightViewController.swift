@@ -10,26 +10,53 @@ import UIKit
 
 class RightViewController: UIViewController {
 
+    // private 是真正意义上的私有, 不能传到外面让其它类修改
+    
+//    private var transitionDelegate:RightVcTransitionDelegate?
+    public var transitionDelegate:LeftVcTransitionDelegate?
+    
+    public var interfaceTransition: SwipeUpInteractiveTransition = SwipeUpInteractiveTransition(interactiveType: .InteractiveTypeRight)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    print("left vc did loaded")
+        view.backgroundColor = UIColor.init(white: 0.7, alpha: 1.0)
+        
+        interfaceTransition.wireToViewController(viewController: self)
+        interfaceTransition.operation = ({
+            [weak self]in
+            self?.navigationController?.popViewController(animated: true)
+        })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    init(transitionDelegate:LeftVcTransitionDelegate) {
+        self.transitionDelegate = transitionDelegate
+        super.init(nibName: nil, bundle: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
 
+    
+    deinit {
+        print("right vc deinit")
+    }
+
+}
+
+
+
+
+extension RightViewController : UINavigationControllerDelegate {
+
+
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return RightVcPushTransition(transitionType: operation == .push ? .RightVcTransitionTypePush : .RightVcTransitionTypePop)
+    }
+    
+    public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interfaceTransition.interacting ? interfaceTransition : nil
+    }
+    
 }

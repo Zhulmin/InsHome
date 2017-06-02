@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 enum TransitionType {
     case TransitionTypePush
     case TransitionTypePop
@@ -24,10 +26,13 @@ enum InteractiveType {
 
 class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
 
+    /** 设置滑动距离 */
+    static let swipeDistance = CGFloat(150.0)
+    private var currentValue = CGFloat(0.0)
     private var interactiveType: InteractiveType
     
-    // 闭包
     public var operation : (()->())?
+    public var secondOperation : (()->())?
     public var interacting: Bool = false
     
     init(interactiveType:InteractiveType) {
@@ -36,6 +41,7 @@ class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
     }
     
     private var shouldComplete: Bool = false
+    private var isChanged: Bool = false
     private weak var presentingVC: UIViewController?
     
     public func wireToViewController(viewController :UIViewController) {
@@ -58,28 +64,71 @@ class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
         var translationValue = CGFloat(0.0)
         
         switch interactiveType {
-        case .InteractiveTypeLeft, .InteractiveTypeUp:
+        case .InteractiveTypeLeft:
             translationValue = -translation.x
-        case .InteractiveTypeRight, .InteractiveTypeDown:
+        case .InteractiveTypeUp:
+            translationValue = translation.y
+        case .InteractiveTypeRight:
             translationValue = translation.x
+        case .InteractiveTypeDown:
+            translationValue = -translation.y
         }
+        
+//        print(translationValue)
         
         switch gestureRecognizer.state {
         case .began:
+            
             interacting = true
-            if operation != nil {
-                operation!()
-            }
         case .changed:
-            var fraction = translationValue / 280.0;
+            
+            if !isChanged {
+                
+                currentValue = translationValue
+                if translationValue > 0 {
+                    if operation != nil {
+                        operation!()
+                    }
+                }else {
+                    
+                    if secondOperation != nil {
+                        secondOperation!()
+                    }
+                }
+            }
+            
+            isChanged = true
+            
+            // 如果方向改变了, 则重新计算
+            if (currentValue > CGFloat(0.0) && translationValue < CGFloat(0.0)) || (currentValue < CGFloat(0.0) && translationValue > CGFloat(0.0)) {
+                cancel()
+                currentValue = translationValue
+                isChanged = false
+                break
+            }
+            
+            if translationValue < 0 {
+                translationValue = -translationValue
+            }
+            
+            var fraction = translationValue / SwipeUpInteractiveTransition.swipeDistance;
             fraction = CGFloat(fminf(fmaxf(Float(fraction), 0.0), 1.0))
+
+            shouldComplete = fraction > 0.35
+            
+            if fraction > 0.37 {
+                //平缓动画
+                finish()
+                break
+            }
             print(fraction)
-            shouldComplete = fraction > 0.5
             update(fraction)
+            
         case .ended:
             fallthrough
         case .cancelled:
             interacting = false
+            isChanged = false
             if !shouldComplete ||  gestureRecognizer.state == UIGestureRecognizerState.cancelled {
                 cancel()
             }else {

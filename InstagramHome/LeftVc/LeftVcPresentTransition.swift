@@ -15,7 +15,7 @@ enum LeftVcTransitionType {
 
 class LeftVcPresentTransition: NSObject {
     
-    let durationTime = 0.5
+    let durationTime = 0.75
     
     var transitionType : LeftVcTransitionType
     
@@ -63,7 +63,7 @@ extension LeftVcPresentTransition : UIViewControllerAnimatedTransitioning {
         
         toView.frame = CGRect(x: -toViewWidth, y: 0, width: toViewWidth, height: toViewHeight)
         
-        UIView.animate(withDuration: durationTime, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: durationTime, delay: 0, options: .curveEaseInOut, animations: {
             toView.frame = CGRect(x: 0, y: 0, width: toViewWidth, height: toViewHeight)
             fromView.frame = CGRect(x: toViewWidth, y: 0, width: toViewWidth, height: toViewHeight)
         }, completion: {_ in

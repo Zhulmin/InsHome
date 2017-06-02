@@ -9,10 +9,15 @@
 import UIKit
 
 
-class LeftVcTransitionDelegate: NSObject,UIViewControllerTransitioningDelegate {
+class LeftVcTransitionDelegate: NSObject {
 
     public var presentingInterface : SwipeUpInteractiveTransition = SwipeUpInteractiveTransition(interactiveType: .InteractiveTypeRight)
     public var dismissInterface : SwipeUpInteractiveTransition = SwipeUpInteractiveTransition(interactiveType: .InteractiveTypeLeft)
+
+}
+
+
+extension LeftVcTransitionDelegate : UIViewControllerTransitioningDelegate {
     
     // 代理方法
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -30,5 +35,4 @@ class LeftVcTransitionDelegate: NSObject,UIViewControllerTransitioningDelegate {
     
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return dismissInterface.interacting ? dismissInterface : nil;
-    }
-}
+    }}

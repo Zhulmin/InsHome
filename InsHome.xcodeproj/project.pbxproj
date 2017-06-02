@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B72634F51EDFC42B00FEA2B0 /* SwipeUpInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320F71EDEA5F200A5B05A /* SwipeUpInteractiveTransition.swift */; };
+		B73C19E21EE02F90008EEA99 /* RightVcTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73C19E11EE02F90008EEA99 /* RightVcTransitionDelegate.swift */; };
 		B78320BB1EDE4EBC00A5B05A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320BA1EDE4EBC00A5B05A /* AppDelegate.swift */; };
 		B78320BD1EDE4EBC00A5B05A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78320BC1EDE4EBC00A5B05A /* HomeViewController.swift */; };
 		B78320C01EDE4EBC00A5B05A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78320BE1EDE4EBC00A5B05A /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B73C19E11EE02F90008EEA99 /* RightVcTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightVcTransitionDelegate.swift; sourceTree = "<group>"; };
 		B78320B71EDE4EBC00A5B05A /* InsHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78320BA1EDE4EBC00A5B05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B78320BC1EDE4EBC00A5B05A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B78320EF1EDE608900A5B05A /* RightViewController.swift */,
+				B73C19E11EE02F90008EEA99 /* RightVcTransitionDelegate.swift */,
 				B78320F11EDE60A200A5B05A /* RightVcPushTransition.swift */,
 			);
 			path = RightVc;
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78320EC1EDE529400A5B05A /* LeftViewController.swift in Sources */,
+				B73C19E21EE02F90008EEA99 /* RightVcTransitionDelegate.swift in Sources */,
 				B78320BD1EDE4EBC00A5B05A /* HomeViewController.swift in Sources */,
 				B78320F01EDE608900A5B05A /* RightViewController.swift in Sources */,
 				B78320BB1EDE4EBC00A5B05A /* AppDelegate.swift in Sources */,

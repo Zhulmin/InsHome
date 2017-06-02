@@ -11,16 +11,34 @@ import UIKit
 
 public protocol LeftViewControllerDelegate:NSObjectProtocol {
     func dismiss()
-    func setDismissInteractive()
 }
 
 class LeftViewController: UIViewController {
 
     public weak var delegate:LeftViewControllerDelegate?
     
+    private let transitionDelegate : LeftVcTransitionDelegate?
+    
+    init(transitionDelegate:LeftVcTransitionDelegate) {
+        self.transitionDelegate = transitionDelegate
+        super.init(nibName: nil, bundle: nil)
+        
+        transitioningDelegate = transitionDelegate
+        
+        transitionDelegate.dismissInterface.wireToViewController(viewController: self)
+        transitionDelegate.dismissInterface.operation = ({
+            [weak self] in
+            self?.dismissVc()
+        })
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("left vc did loaded")
         view.backgroundColor = UIColor.init(white: 0.8, alpha: 1.0)
         self.setupViews()
     }
@@ -35,5 +53,10 @@ class LeftViewController: UIViewController {
     
     func dismissVc() {
         delegate?.dismiss()
+    }
+    
+    
+    deinit {
+        print("left vc deinit")
     }
 }
